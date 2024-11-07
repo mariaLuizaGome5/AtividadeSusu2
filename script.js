@@ -92,35 +92,31 @@ function mascara_cnpj() {
     localStorage.setItem("cnpj",cnpj_formatado)
 }
 
+function mascara_codigo() {
+    let codigo_formatado = document.getElementById("codigo").value;
 
-
-    function mascara_codigo() {
-        let codigo_formatado = document.getElementById("codigo").value;
-    
-        if (codigo_formatado[2] !== "_") {
-            if (codigo_formatado[2] !== undefined) {
-                document.getElementById("codigo").value = codigo_formatado.slice(0, 2) + "_" + codigo_formatado[2];
-            }
+    if (codigo_formatado[2] !== "_") {
+        if (codigo_formatado[2] !== undefined) {
+            document.getElementById("codigo").value = codigo_formatado.slice(0, 2) + "_" + codigo_formatado[2];
         }
-    
-        if (codigo_formatado[5] !== "//") {
-            if (codigo_formatado[5] !== undefined) {
-                document.getElementById("codigo").value = codigo_formatado.slice(0, 5) + "//" + codigo_formatado[5];
-            }
-        }
-       if (codigo_formatado[8] !== "-") {
-            if (codigo_formatado[9] !== undefined) {
-                document.getElementById("codigo").value = codigo_formatado.slice(0, 8) + "-" + codigo_formatado[8];
-            }
-        }
-        if (codigo_formatado[13] !== ".") {
-            if (codigo_formatado[13] !== undefined) {
-                document.getElementById("codigo").value = codigo_formatado.slice(0, 13) + "." + codigo_formatado[13];
-            }
-        }
-     
-
     }
+
+    if (codigo_formatado[5] !== "//") {
+        if (codigo_formatado[5] !== undefined) {
+            document.getElementById("codigo").value = codigo_formatado.slice(0, 5) + "//" + codigo_formatado[5];
+        }
+    }
+
+    if (codigo_formatado[5] !== ".") {
+        if (codigo_formatado[5] !== undefined) {
+            document.getElementById("codigo").value = codigo_formatado.slice(0, 13) + "." + codigo_formatado[13];
+        }
+    }
+
+    localStorage.setItem("codigo",codigo_formatado)
+}
+
+
 
 
 
